@@ -1,6 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
-
+import java.awt.event.*;
 public class Ex1404 extends JFrame {
 	
 	public Ex1404() {
@@ -52,6 +52,53 @@ public class Ex1404 extends JFrame {
 		JLabel lbl2 = new JLabel("");
 		resPanel.add(lbl2);
 		
+		plus.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(e.getSource() == plus) {
+					int num01 = Integer.parseInt(num1.getText());
+					int num02 = Integer.parseInt(num1.getText());
+					
+					int result = num01 + num02;
+					lbl2.setText(String.valueOf(result));
+				}
+			}
+		});
+		
+		minus.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(e.getSource() == minus) {
+					int num01 = Integer.parseInt(num1.getText());
+					int num02 = Integer.parseInt(num1.getText());
+					
+					int result = num01 - num02;
+					lbl2.setText(String.valueOf(result));
+				}
+			}
+		});
+		
+		mult.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(e.getSource() == mult) {
+					int num01 = Integer.parseInt(num1.getText());
+					int num02 = Integer.parseInt(num1.getText());
+					
+					int result = num01 * num02;
+					lbl2.setText(String.valueOf(result));
+				}
+			}
+		});
+		
+		div.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(e.getSource() == div) {
+					int num01 = Integer.parseInt(num1.getText());
+					int num02 = Integer.parseInt(num1.getText());
+					
+					int result = num01 / num02;
+					lbl2.setText(String.valueOf(result));
+				}
+			}
+		});
 		// 프레임 설정
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(null);
